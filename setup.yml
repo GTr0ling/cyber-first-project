@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes # This means that all tasks will be executed with sudo 
+  tasks:
+  - name: install Python 3
+    apt:
+      name: python3
+      state: present
+      update_cache: yes
+
